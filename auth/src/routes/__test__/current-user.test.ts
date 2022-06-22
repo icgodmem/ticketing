@@ -19,7 +19,7 @@ describe('Current User', () => {
       .get('/api/users/currentuser')
       .set('Cookie', cookie)
       .send()
-      .expect(200);
+      .expect(400);
 
     expect(response.body.currentUser.email).toEqual('test@test.com');
   });
